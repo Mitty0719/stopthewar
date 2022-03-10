@@ -1,5 +1,6 @@
 body {
   background: #000;
+  font-family: 'IBM Plex Sans KR', sans-serif;
 }
 .flag-section {
   width: 100vw;
@@ -23,18 +24,65 @@ body {
 .cls-1,.cls-2,.cls-3{fill:none;stroke-linecap:round;stroke-linejoin:round;}
 .cls-1,.cls-2{stroke-width:40px;}
 .cls-1{stroke:#005bbb; stroke-dasharray: 3400; stroke-dashoffset: 3400; animation: flag-top-ani 10s forwards;}
-.cls-2{stroke:#ff0; stroke-dasharray: 3200; stroke-dashoffset: 3200; animation: flag-bottom-ani 10s forwards;}
+.cls-2{stroke:#FFD500; stroke-dasharray: 3200; stroke-dashoffset: 3200; animation: flag-bottom-ani 10s forwards;}
 .cls-3{stroke:#000;stroke-width:20px;}
 /* ---------- */
 
 .news-section {
-  height: 100vh;
+  
+}
+.news-con {
+  padding: 30px;
+}
+.news-item {
+  padding: 20px 0;
+}
+.news-item .title {
+  padding: 10px 0;
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+}
+.news-item .content {
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #888;
 }
 
-.donate-section {
+
+.donation-section {
   height: 100vh;
 }
 
 .comment-section {
   height: 100vh;
+}
+.comment-input-con {
+  display: flex;
+  padding: 30px;
+}
+#comment-form {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+.comment-textbox {
+  flex-grow: 9;
+  padding: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: #fff;
+  border: 4px solid #005bbb;
+  border-radius: 30px;
+}
+.comment-button {
+  flex-grow: 1;
+  padding: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: #FFD500;
+  border: 1px solid #FFD500;
+  border-radius: 30px;
 }
