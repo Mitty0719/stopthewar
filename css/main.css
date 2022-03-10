@@ -32,7 +32,7 @@ body {
   
 }
 .news-con {
-  padding: 30px;
+  padding: 100px 30px;
 }
 .news-item {
   padding: 20px 0;
@@ -50,9 +50,48 @@ body {
   color: #888;
 }
 
-
 .donation-section {
-  height: 100vh;
+  
+}
+.donation-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+.donation-item {
+  flex: 1 1 0;
+  height: 500px;
+  padding: 15px;
+  transition-duration: 1s;
+}
+
+.donation-item .donation-name {
+  padding: 15px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: #888 1px 1px;
+  transition-duration: 1s;
+}
+.donation-item .donation-text {
+  padding: 15px;
+  color: #fff;
+  text-shadow: #888 1px 1px;
+  transition-duration: 1s;
+}
+.donation-item:hover { /* 나중에 js로 넣기 */
+  flex: 3 1 0;
+}
+.donation-item.selected {
+  flex: 3 1 0;
+
+}
+.donation-item.selected .donation-name {
+  writing-mode: initial;
 }
 
 .comment-section {
