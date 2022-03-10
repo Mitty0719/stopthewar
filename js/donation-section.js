@@ -54,9 +54,13 @@ export class DonationSection{
   constructor(){
     this.section = document.querySelector('.donation-section');
     this.donationCon = document.querySelector('.donation-con');
-
     this.createItem();
-    
+    this.donationItems = document.querySelectorAll('.donation-item');
+
+    this.donationCon.addEventListener('mouseover', this.inItem.bind(this));
+    this.donationItems.forEach(item => {
+      item.addEventListener('mouseleave', this.outItem.bind(this, item));
+    });
   }
 
   createItem(){
@@ -78,5 +82,21 @@ export class DonationSection{
       
       this.donationCon.appendChild(donationItem);
     });
+  }
+
+  inItem(e){
+    let target = e.target;
+    
+    while(!e.target.classList.contains('donation-item')){
+      if(target === document.body){
+        return;
+      }else{
+        target = target.parentNode;
+      }
+    }
+    target.classList.add('selected');
+  }
+  outItem(item){
+    item.classList.remove('selected');
   }
 }
