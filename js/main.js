@@ -1,8 +1,10 @@
-import { flagSection } from "./flag-section.js";
 
 class App{
   constructor(){
-    new flagSection();
+    const a = document.querySelector('.cls-1');
+    const b = document.querySelector('.cls-2');
+    console.log(a.getTotalLength());
+    console.log(b.getTotalLength());
   }
 }
 

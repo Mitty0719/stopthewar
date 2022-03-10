@@ -38,6 +38,7 @@ class Block{
   constructor(stageWidth, stageHeight, isTop){
     this.width = stageWidth;
     this.height = stageHeight / 2;
+    this.speed= 10;
 
     if(isTop){
       this.x = this.width;
@@ -57,7 +58,7 @@ class Block{
     ctx.fillStyle = this.color;
     ctx.fillRect(this.x, this.y, this.width, this.height);
     ctx.restore();
-    this.x += this.vx;
+    this.x += this.vx * this.speed;
     console.log('call');
   }
 }
