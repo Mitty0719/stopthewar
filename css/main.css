@@ -54,23 +54,27 @@ body {
   
 }
 .donation-con {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  
   padding: 30px;
+  gap: 20px;
 }
 .donation-item {
-  flex: 1 1 0;
-  height: 500px;
+  position: relative;
+  height: 200px;
   padding: 15px;
   transition-duration: 1s;
+  background: white;
+  border-radius: 30px;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .donation-item .donation-name {
   padding: 15px;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
   font-size: 2rem;
   font-weight: 600;
   color: #fff;
@@ -81,16 +85,35 @@ body {
   padding: 15px;
   color: #fff;
   text-shadow: #888 1px 1px;
+  line-height: 2rem;
   transition-duration: 1s;
+  opacity: 0;
+  z-index: 5;
+}
+.donation-item .donation-logo {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 100px;
+  transform: scale(3, 3);
+  transition-duration: 1s;
+  opacity: 1;
+  z-index: 3;
 }
 .donation-item.selected {
-  flex: 3 1 0;
-
+  box-shadow: #005bbb 5px 5px;
+  transform: translate(-5px, -5px);
+  transition-duration: 1s;
 }
 .donation-item.selected .donation-name {
-  writing-mode: initial;
-}
 
+}
+.donation-item.selected .donation-text {
+  opacity: 1;
+}
+.donation-item.selected .donation-logo {
+  opacity: 0;
+}
 .comment-section {
   height: 100vh;
 }
