@@ -53,7 +53,7 @@ const DONATION_DATA = [
     name: '사랑의열매',
     text: '지금 이 순간에도 전쟁으로 삶의 터전을 잃어버리고 생명의 위협 속에서 지쳐가고 있을 우크라이나 전쟁 피해/피난민들을 위해 여러분의 관심이 필요합니다.',
     color: '#FF0000',
-    url: 'https://www.chest.or.kr/ca/speclmys/initSpeclmysDetail.do',
+    url: 'https://www.chest.or.kr/base.do',
     img: './images/donation_communitychest.png'
   },
 ]
