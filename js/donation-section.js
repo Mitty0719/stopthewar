@@ -1,4 +1,3 @@
-import { Ball } from './module/ball.js';
 const DONATION_DATA = [
   {
     name: '대한적십자사',
