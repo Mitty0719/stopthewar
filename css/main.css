@@ -145,3 +145,9 @@ body {
   border: 1px solid #FFD500;
   border-radius: 30px;
 }
+
+@media screen and (max-width: 800px) {
+  .donation-con {
+    grid-template-columns: 1fr;
+  }
+}
